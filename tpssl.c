@@ -1,5 +1,8 @@
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #define CENTINELA '#'
 
 char alfabeto[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', 'F'};
@@ -61,6 +64,7 @@ int main(){
         {
             if(estadoDeAceptacion[estadoActual])
             {
+            	palabra[k]='\0';
                 printf("%s \n", palabra);
             }
             estadoActual = estadoInicial;
@@ -68,6 +72,12 @@ int main(){
         }
 
         i++;
+    }
+    
+    if(estadoDeAceptacion[estadoActual])
+    {
+    	palabra[k]='\0';
+        printf("%s \n", palabra);
     }
 
     return 0;
